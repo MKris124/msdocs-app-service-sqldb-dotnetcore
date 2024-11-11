@@ -31,7 +31,8 @@ jobs:
         run: dotnet tool install -g dotnet-ef --version 8.*
       - name: migrations
         run: dotnet ef migrations bundle --runtime linux-x64 -o ${{env.DOTNET_ROOT}}/myapp/migrationsbundle
-      
+       - name: Copy dacpac
+        run: cp MovieCatalog.Web/    imdbtitles_sample_azure.dacpac ${{env.  DOTNET_ROOT}}/myapp
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
