@@ -12,4 +12,4 @@ updates:
      interval: weekly
 - name: Copy dacpac
    run: |
-    cp MovieCatalog.Web/    imdbtitles_sample_azure.dacpac ${{env.  DOTNET_ROOT}}/myapp
+    cp MovieCatalog.Web/    imdbtitles_sample_azure.dacpac ${{env.  DOTNET_ROOT}}/
